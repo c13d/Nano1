@@ -12,9 +12,11 @@ class ViewController: UIViewController, FSCalendarDelegate{
     
     @IBOutlet var calendar: FSCalendar!
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Home"
         calendar.delegate = self
     }
     
