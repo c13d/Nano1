@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057743C655569FF84B38A76E /* Pods_Nano1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBDB8A24BD24F5520034033 /* Pods_Nano1.framework */; };
 		F071FE2428191E330054DD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071FE2328191E330054DD72 /* AppDelegate.swift */; };
 		F071FE2628191E330054DD72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071FE2528191E330054DD72 /* SceneDelegate.swift */; };
 		F071FE2828191E330054DD72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071FE2728191E330054DD72 /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2784D6E6E7D68AF69574281A /* Pods-Nano1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano1.release.xcconfig"; path = "Target Support Files/Pods-Nano1/Pods-Nano1.release.xcconfig"; sourceTree = "<group>"; };
+		5BBDB8A24BD24F5520034033 /* Pods_Nano1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nano1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB962C3E56D5607B24ECB4D4 /* Pods-Nano1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano1.debug.xcconfig"; path = "Target Support Files/Pods-Nano1/Pods-Nano1.debug.xcconfig"; sourceTree = "<group>"; };
 		F071FE2028191E330054DD72 /* Nano1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F071FE2328191E330054DD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F071FE2528191E330054DD72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057743C655569FF84B38A76E /* Pods_Nano1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A383D355AC73A11B7C61491 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB962C3E56D5607B24ECB4D4 /* Pods-Nano1.debug.xcconfig */,
+				2784D6E6E7D68AF69574281A /* Pods-Nano1.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		357CA78C7985E5CF0D8F6B52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BBDB8A24BD24F5520034033 /* Pods_Nano1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F071FE1728191E330054DD72 = {
 			isa = PBXGroup;
 			children = (
 				F071FE2228191E330054DD72 /* Nano1 */,
 				F071FE2128191E330054DD72 /* Products */,
+				2A383D355AC73A11B7C61491 /* Pods */,
+				357CA78C7985E5CF0D8F6B52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F071FE3728191E340054DD72 /* Build configuration list for PBXNativeTarget "Nano1" */;
 			buildPhases = (
+				C4F00D72E4B7DCDD0A8DA1AA /* [CP] Check Pods Manifest.lock */,
 				F071FE1C28191E330054DD72 /* Sources */,
 				F071FE1D28191E330054DD72 /* Frameworks */,
 				F071FE1E28191E330054DD72 /* Resources */,
+				2938732AAA113939915CACC5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2938732AAA113939915CACC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nano1/Pods-Nano1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nano1/Pods-Nano1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nano1/Pods-Nano1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4F00D72E4B7DCDD0A8DA1AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nano1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F071FE1C28191E330054DD72 /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		F071FE3828191E340054DD72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB962C3E56D5607B24ECB4D4 /* Pods-Nano1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		F071FE3928191E340054DD72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2784D6E6E7D68AF69574281A /* Pods-Nano1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
