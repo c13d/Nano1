@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		057743C655569FF84B38A76E /* Pods_Nano1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBDB8A24BD24F5520034033 /* Pods_Nano1.framework */; };
+		F0313872281942FA00A084CA /* NewExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0313871281942FA00A084CA /* NewExerciseViewController.swift */; };
+		F05CFC90281934FD00C59116 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05CFC8F281934FD00C59116 /* ExerciseViewController.swift */; };
 		F071FE2428191E330054DD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071FE2328191E330054DD72 /* AppDelegate.swift */; };
 		F071FE2628191E330054DD72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071FE2528191E330054DD72 /* SceneDelegate.swift */; };
 		F071FE2828191E330054DD72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071FE2728191E330054DD72 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 		2784D6E6E7D68AF69574281A /* Pods-Nano1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano1.release.xcconfig"; path = "Target Support Files/Pods-Nano1/Pods-Nano1.release.xcconfig"; sourceTree = "<group>"; };
 		5BBDB8A24BD24F5520034033 /* Pods_Nano1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nano1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB962C3E56D5607B24ECB4D4 /* Pods-Nano1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nano1.debug.xcconfig"; path = "Target Support Files/Pods-Nano1/Pods-Nano1.debug.xcconfig"; sourceTree = "<group>"; };
+		F0313871281942FA00A084CA /* NewExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExerciseViewController.swift; sourceTree = "<group>"; };
+		F05CFC8F281934FD00C59116 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		F071FE2028191E330054DD72 /* Nano1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F071FE2328191E330054DD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F071FE2528191E330054DD72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +54,6 @@
 				DB962C3E56D5607B24ECB4D4 /* Pods-Nano1.debug.xcconfig */,
 				2784D6E6E7D68AF69574281A /* Pods-Nano1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +89,8 @@
 				F071FE2328191E330054DD72 /* AppDelegate.swift */,
 				F071FE2528191E330054DD72 /* SceneDelegate.swift */,
 				F071FE2728191E330054DD72 /* ViewController.swift */,
+				F05CFC8F281934FD00C59116 /* ExerciseViewController.swift */,
+				F0313871281942FA00A084CA /* NewExerciseViewController.swift */,
 				F071FE2928191E330054DD72 /* Main.storyboard */,
 				F071FE2F28191E340054DD72 /* Assets.xcassets */,
 				F071FE3128191E340054DD72 /* LaunchScreen.storyboard */,
@@ -211,9 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F071FE2828191E330054DD72 /* ViewController.swift in Sources */,
+				F05CFC90281934FD00C59116 /* ExerciseViewController.swift in Sources */,
 				F071FE2428191E330054DD72 /* AppDelegate.swift in Sources */,
 				F071FE2628191E330054DD72 /* SceneDelegate.swift in Sources */,
 				F071FE2E28191E330054DD72 /* Nano1.xcdatamodeld in Sources */,
+				F0313872281942FA00A084CA /* NewExerciseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
