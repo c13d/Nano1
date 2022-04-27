@@ -12,8 +12,6 @@ class ViewController: UIViewController, FSCalendarDelegate{
     
     @IBOutlet var calendar: FSCalendar!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
@@ -27,7 +25,5 @@ class ViewController: UIViewController, FSCalendarDelegate{
         let selectedDate = formatter.string(from: date)
         print("\(selectedDate)")
     }
-
-
 }
 
