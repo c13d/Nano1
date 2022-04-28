@@ -31,7 +31,6 @@ class ExerciseTableViewCell: UITableViewCell {
     func setupView() {
         guard let data = object else { return }
         exerciseTitle.text = data.name
-        
     }
 
 }
