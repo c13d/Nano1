@@ -24,20 +24,11 @@ class NewExerciseViewController: UIViewController {
     }
     
     @IBAction func didTapSaveButton(_ sender: Any) {
-        guard let text = nameTextField.text, !text.isEmpty else{
-            return
-        }
-        
-        print(text)
-        print("Start Time \(startTime.text!)")
-        print("End Time \(endTime.text!)")
-        
-        
         if let selectedRows = dayTableView.indexPathsForSelectedRows
         {
             for i in selectedRows
             {
-                selectedDay.append(dayWeek[i.row])
+                selectedDay.append(dayWeek[i.section])
             }
             
             print("\n")
@@ -47,6 +38,31 @@ class NewExerciseViewController: UIViewController {
                 print(i)
             }
         }
+    
+        guard let text = nameTextField.text, !text.isEmpty else{
+            // showToast(message: "Name can't be empty")
+            showAlert(message: "Name must be field")
+            return
+        }
+        
+        let f = DateFormatter()
+        f.dateFormat = "HH:mm"
+        
+        if (f.date(from: startTime.text!)! >= f.date(from: endTime.text!)! )
+        {
+            showAlert(message: "Start time must be earlier end time")
+            return
+        }else if(selectedDay.count == 0){
+            showAlert(message: "You must select at least one day of week")
+            return
+        }
+        
+        print(text)
+        print("Start Time \(startTime.text!)")
+        print("End Time \(endTime.text!)")
+        
+        
+        
         
         self.createItem(name: text)
 
@@ -55,7 +71,20 @@ class NewExerciseViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-//START HERE
+    func showAlert(message: String){
+        let alert = UIAlertController(title: "Save has failed", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {action in
+            print("tapped Ok")
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+    func showActionSheet(){
+        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,6 +197,24 @@ class NewExerciseViewController: UIViewController {
             
         }
     }
+    
+    func showToast(message: String){
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.width/2-150, y: self.view.frame.height - 72, width: 300, height: 40))
+        
+        toastLabel.textAlignment = .center
+        toastLabel.backgroundColor = UIColor.red.withAlphaComponent(0.6)
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds = true
+        toastLabel.text = message
+        self.view.addSubview(toastLabel)
+        
+        UIView.animate(withDuration: 4.0, delay: 1.0, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }){(isCompleted) in
+            toastLabel.removeFromSuperview()
+        }
+    }
 }
 
 extension NewExerciseViewController: UITextFieldDelegate{
@@ -202,6 +249,11 @@ extension NewExerciseViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         dayTableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
+    
+    
+}
+
+extension ViewController{
     
     
 }
