@@ -38,7 +38,8 @@ class NewExerciseViewController: UIViewController {
                 selectedDay.append(dayWeek[i.row])
             }
             
-            print("Selected Day: ")
+            print("\n")
+            print("\n\nSelected Day: ")
             for i in selectedDay
             {
                 print(i)
