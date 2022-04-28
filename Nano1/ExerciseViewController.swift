@@ -20,9 +20,9 @@ class ExerciseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.refresh), name: NSNotification.Name(rawValue: "newDataNotif"), object: nil)
 
-        
         title = "My Exercise"
         getAllItems()
         
@@ -88,7 +88,6 @@ class ExerciseViewController: UIViewController {
 }
 
 extension ExerciseViewController: UITableViewDelegate, UITableViewDataSource{
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count

@@ -21,6 +21,7 @@
 		F071FE3328191E340054DD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F071FE3128191E340054DD72 /* LaunchScreen.storyboard */; };
 		F088E737281A33AE0081591C /* ExerciseList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088E735281A33AE0081591C /* ExerciseList+CoreDataProperties.swift */; };
 		F088E738281A33AE0081591C /* ExerciseList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088E736281A33AE0081591C /* ExerciseList+CoreDataClass.swift */; };
+		F088E73B281A78E20081591C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088E73A281A78E20081591C /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F071FE3428191E340054DD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F088E735281A33AE0081591C /* ExerciseList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExerciseList+CoreDataProperties.swift"; path = "/Users/christophorusdavin/Documents/Nano1/Nano1/ExerciseList+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		F088E736281A33AE0081591C /* ExerciseList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExerciseList+CoreDataClass.swift"; path = "/Users/christophorusdavin/Documents/Nano1/Nano1/ExerciseList+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		F088E73A281A78E20081591C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				F071FE2528191E330054DD72 /* SceneDelegate.swift */,
 				F03138732819519600A084CA /* ExerciseModel.swift */,
 				F071FE2728191E330054DD72 /* ViewController.swift */,
+				F088E73A281A78E20081591C /* HomeTableViewCell.swift */,
 				F05CFC8F281934FD00C59116 /* ExerciseViewController.swift */,
 				F03138752819559D00A084CA /* ExerciseTableViewCell.swift */,
 				F0313871281942FA00A084CA /* NewExerciseViewController.swift */,
@@ -240,6 +243,7 @@
 				F088E738281A33AE0081591C /* ExerciseList+CoreDataClass.swift in Sources */,
 				F05CFC90281934FD00C59116 /* ExerciseViewController.swift in Sources */,
 				F088E737281A33AE0081591C /* ExerciseList+CoreDataProperties.swift in Sources */,
+				F088E73B281A78E20081591C /* HomeTableViewCell.swift in Sources */,
 				F071FE2428191E330054DD72 /* AppDelegate.swift in Sources */,
 				F071FE2628191E330054DD72 /* SceneDelegate.swift in Sources */,
 				F03138742819519600A084CA /* ExerciseModel.swift in Sources */,

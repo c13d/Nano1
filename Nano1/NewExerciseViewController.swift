@@ -179,13 +179,18 @@ extension NewExerciseViewController: UITextFieldDelegate{
 
 extension NewExerciseViewController: UITableViewDelegate, UITableViewDataSource
 {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dayWeek.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dayTableView.dequeueReusableCell(withIdentifier: "dayWeekCell", for: indexPath)
-        cell.textLabel?.text = dayWeek[indexPath.row]
+        cell.textLabel?.text = dayWeek[indexPath.section]
         cell.selectionStyle = .none
         return cell
     }
