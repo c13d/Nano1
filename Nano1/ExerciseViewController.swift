@@ -106,4 +106,19 @@ extension ExerciseViewController: UITableViewDelegate, UITableViewDataSource{
         cell.exerciseTitle?.text = model.name
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = models[indexPath.row]
+        print(model.name!)
+        print("start time: \(model.startTime!)")
+        print("end time: \(model.endTime!)")
+        
+        
+        let selectedDay = model.dayWeek
+
+        for i in selectedDay!{
+            print(i)
+        }
+    }
+    
 }
