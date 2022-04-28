@@ -2,9 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ExerciseList" representedClassName="ExerciseList" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dayWeek" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="endTime" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ExerciseList" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="ExerciseList" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

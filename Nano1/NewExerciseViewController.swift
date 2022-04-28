@@ -9,6 +9,8 @@ import UIKit
 
 class NewExerciseViewController: UIViewController {
     
+    var selectedDay = [String]()
+    
     let dayWeek = ["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"]
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -29,8 +31,8 @@ class NewExerciseViewController: UIViewController {
         print(text)
         print("Start Time \(startTime.text!)")
         print("End Time \(endTime.text!)")
-        self.createItem(name: text)
-        var selectedDay = [String]()
+        
+        
         if let selectedRows = dayTableView.indexPathsForSelectedRows
         {
             for i in selectedRows
@@ -44,8 +46,9 @@ class NewExerciseViewController: UIViewController {
                 print(i)
             }
         }
-            
         
+        self.createItem(name: text)
+
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newDataNotif"), object: nil)
         
         dismiss(animated: true, completion: nil)
@@ -153,6 +156,9 @@ class NewExerciseViewController: UIViewController {
     func createItem(name: String){
         let newItem = ExerciseList(context: context)
         newItem.name = name
+        newItem.startTime = startTime.text
+        newItem.endTime = endTime.text
+        newItem.dayWeek = selectedDay
         newItem.createdAt = Date()
         
         do{
