@@ -84,6 +84,7 @@ class ViewController: UIViewController, FSCalendarDelegate{
         
         getAllItems()
     }
+
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource

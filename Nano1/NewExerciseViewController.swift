@@ -252,8 +252,3 @@ extension NewExerciseViewController: UITableViewDelegate, UITableViewDataSource
     
     
 }
-
-extension ViewController{
-    
-    
-}
