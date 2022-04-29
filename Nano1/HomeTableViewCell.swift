@@ -13,7 +13,19 @@ class HomeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var exerciseTimeLabel: UILabel!
     
-    @IBOutlet weak var Reschedule: UIButton!
+    @IBAction func rescheduleButton(_ sender: Any) {
+        
+    }
+    
+//    func showAlert(message: String){
+//        let alert = UIAlertController(title: "Reschedule", message: "", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {action in
+//            print("tapped Ok")
+//        }))
+//
+//        present(alert, animated: true)
+//    }
+    
     
     var object: ExerciseModel? {
         didSet {
@@ -37,3 +49,4 @@ class HomeTableViewCell: UITableViewCell {
     }
 
 }
+
