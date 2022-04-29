@@ -24,7 +24,7 @@ class ViewController: UIViewController, FSCalendarDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        title = "My Schedule"
         calendar.delegate = self
         
         tableView.delegate = self
