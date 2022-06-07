@@ -26,6 +26,7 @@ class ViewController: UIViewController, FSCalendarDelegate{
         super.viewDidLoad()
         title = "My Schedule"
         calendar.delegate = self
+        calendar.scope = .week
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -34,6 +35,8 @@ class ViewController: UIViewController, FSCalendarDelegate{
         dayNow()
         getAllItems()
     }
+    
+    
     
     func dayNow(){
         // time
